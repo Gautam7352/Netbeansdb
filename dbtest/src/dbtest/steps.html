@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+SQL> connect System/sys
+Connected.
+SQL> create user m1 identified by m1;
+
+User created.
+
+SQL> grant connect, resource to m1;
+
+Grant succeeded.
+
+SQL> connect m1/m1
+Connected.
+SQL> create table Emp1(no number primary key, name varchar(10));
+
+Table created.
+
+SQL> insert into Emp1 values(1,'pallab');
+
+1 row created.
+
+SQL> insert into Emp1 values(2,'Sumit');
+
+1 row created.
+
+SQL> insert into Emp1 values(3,'Rohit');
+
+1 row created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> select * from Emp1;
+
+        NO NAME
+---------- ----------
+         1 pallab
+         2 Sumit
+         3 Rohit
+
+SQL></div>
+    </body>
+</html>
